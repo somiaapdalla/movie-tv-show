@@ -1,11 +1,14 @@
 import Header from "./component/header"
-import MovieGallery from "./pages/movie"
+import TrendingMovies from "./pages/latest"
+import Movielist from "./pages/movielist"
 
 function App() {
   return <div>
     <Header />
-    <MovieGallery />
-  </div>
+    <Movielist/>
+    <TrendingMovies/>
+    </div>
+  
 }
 
 export default App
