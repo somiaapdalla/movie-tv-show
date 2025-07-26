@@ -1,3 +1,4 @@
+import React from "react";
 function Movielist (){
       const Moviedata=[
       { id: 2, title: "Stranger Things", poster: "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg" },

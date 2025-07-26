@@ -1,4 +1,4 @@
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@radix-ui/react-hover-card";
+ import React from "react";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -30,15 +30,7 @@ function Header() {
             <ul className="flex gap-6 font-semibold text-xl">
              <NavLink to="/"><li>Home</li></NavLink> 
              <Link to="movies"> <li>Tv</li></Link>
-            <HoverCard className="w-5 h-10 bg-white">
-              <HoverCardTrigger>Movie</HoverCardTrigger>
-              <HoverCardContent><li>action</li>
-              <li>romantic</li>
-              <li>horror</li>
-              <li>comedy</li>
-              </HoverCardContent>
-            </HoverCard>
-              
+             <Link to="films"><li>movie</li></Link>
               <li>Favourite</li>
               <Link to="watchlist"><li>Watchlist</li></Link>
             </ul>
@@ -48,6 +40,7 @@ function Header() {
               placeholder="Search for a movie..."
               className="px-4 py-2 w-64 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none"
             />
+
 
             <div className="text-2xl cursor-pointer" onClick={toggleDarkMode}>
               {!isdark ? (
