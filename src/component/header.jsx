@@ -1,5 +1,7 @@
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@radix-ui/react-hover-card";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+
 
 function Header() {
   const [isdark, setisdark] = useState(false);
@@ -24,12 +26,21 @@ function Header() {
           <h1 className="text-red-700 font-bold text-5xl">NETFLIX</h1>
 
           <div className="flex items-center gap-10">
+
             <ul className="flex gap-6 font-semibold text-xl">
              <NavLink to="/"><li>Home</li></NavLink> 
              <Link to="movies"> <li>Tv</li></Link>
-              <Link><li>Movie</li></Link>
+            <HoverCard className="w-5 h-10 bg-white">
+              <HoverCardTrigger>Movie</HoverCardTrigger>
+              <HoverCardContent><li>action</li>
+              <li>romantic</li>
+              <li>horror</li>
+              <li>comedy</li>
+              </HoverCardContent>
+            </HoverCard>
+              
               <li>Favourite</li>
-              <Link><li>Watchlist</li></Link>
+              <Link to="watchlist"><li>Watchlist</li></Link>
             </ul>
 
             <input
