@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   const [isdark, setisdark] = useState(false);
@@ -24,11 +25,11 @@ function Header() {
 
           <div className="flex items-center gap-10">
             <ul className="flex gap-6 font-semibold text-xl">
-              <li>Home</li>
-              <li>Tv</li>
-              <li>Movie</li>
+             <NavLink to="/"><li>Home</li></NavLink> 
+             <Link to="movies"> <li>Tv</li></Link>
+              <Link><li>Movie</li></Link>
               <li>Favourite</li>
-              <li>Watchlist</li>
+              <Link><li>Watchlist</li></Link>
             </ul>
 
             <input
