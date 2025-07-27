@@ -1,16 +1,36 @@
 import React from "react";
-function MovieCard({ movie }) {
+import movies from "../component/moviedata";         
+import MovieCard from "./films";
+
+function Movielist() {
+  const trendingMovies = movies.filter(
+    (movie) => movie.type === "movie" && movie.trending
+  );
+  const popularMovies = movies.filter(
+    (movie) => movie.type === "movie" && movie.popular
+  );
+
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-      <img src={movie.poster} alt={movie.title} className="w-full h-72 object-cover" />
-      <div className="p-4">
-        <p className="text-center text-lg font-semibold text-gray-800 dark:text-white">
-          {movie.title}
-        </p>
-        <p className="text-sm text-center text-gray-500">{movie.genre}</p>
+    <div className="p-10 space-y-10  bg-gray-900 min-h-screen md:p-12">
+      <div>
+        <h2 className="text-3xl font-bold mb-4">Trending Movies</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {trendingMovies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-3xl font-bold mb-4">Popular Movies</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {popularMovies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
-export default MovieCard;
+export default Movielist

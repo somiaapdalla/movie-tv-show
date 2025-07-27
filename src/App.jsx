@@ -1,27 +1,26 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom"
-import Header from "./component/header"
-import Movielist from "./pages/movielist"
-// import Movies from "./pages/tv"
-import Listfilms from "./pages/films"
-import MovieCard from "./pages/tv";
+import {  Routes, Route } from "react-router-dom";
+import TvShows from "./pages/tv";
+import Header from "./component/header";
+import Movielist from "./pages/movielist";
+import ListFilms from "./pages/listfilms";
+
 
 
 
 
 function App() {
   return <div>
-     <Header />
-    <Routes>
-    <Route path="/" element={<MovieCard/>}/>
-    {/* <Route path="/movies" element={<Movies />}/> */}
-   <Route path="/films" element={<Listfilms />} />
-       </Routes>
-       
+
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Movielist/>} />
+        <Route path="/movies" element={<TvShows />} />
+        <Route path="listfilm" element={<ListFilms />}/>
   
-    
-    </div>
-  
+      </Routes>
+
+</div>
 }
 
 export default App
