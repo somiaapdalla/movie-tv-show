@@ -178,6 +178,8 @@ const DramaMovies = [
           ))}
         </div>
       </div>
+
+      
     </div>
   );
 }

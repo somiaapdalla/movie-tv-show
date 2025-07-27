@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const BEARER_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NzE1NzMwYTA4OTA3MTI0MmFjY2JkMDU2OGMxODkxNiIsIm5iZiI6MTc1MzQ2NDQ1NS43NjksInN1YiI6IjY4ODNiZTg3OGJlZWEwMmU2ZThhNjIwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eg14ZYPWVHuuo19yqUwJ7TzSr0BwJ1VGyV795BVFoFY"; // ← ضعي التوكن هنا
+// const BEARER_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NzE1NzMwYTA4OTA3MTI0MmFjY2JkMDU2OGMxODkxNiIsIm5iZiI6MTc1MzQ2NDQ1NS43NjksInN1YiI6IjY4ODNiZTg3OGJlZWEwMmU2ZThhNjIwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eg14ZYPWVHuuo19yqUwJ7TzSr0BwJ1VGyV795BVFoFY"; // ← ضعي التوكن هنا
 
 function Header() {
   const [isdark, setisdark] = useState(false);
