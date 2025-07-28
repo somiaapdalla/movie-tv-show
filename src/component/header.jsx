@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import movies from "./moviedata";
 import MovieCard from "../pages/films";
+
 
 function Header() {
   const [isdark, setisdark] = useState(false);
@@ -51,7 +52,7 @@ function Header() {
               <NavLink to="/movies"><li>Tv</li></NavLink>
               <NavLink to="/listfilm"><li>Movie</li></NavLink>
               <NavLink to="/watchlist"><li>Watchlist</li></NavLink>
-              <NavLink to="/contact"><li>Contact</li></NavLink>
+              
             </ul>
 
             <input
@@ -101,9 +102,12 @@ function Header() {
               The search is over! Let Plex help you find the perfect <br />
               movie to watch tonight for free.
             </p>
-            <button className="py-2 px-6 bg-yellow-600 rounded-xl font-bold hover:bg-yellow-500 transition">
-              Watch Now
-            </button>
+     <Link to="contact">
+  <button className="py-2 px-6 bg-yellow-600 rounded-xl font-bold hover:bg-yellow-500 transition">
+    Watch Now
+  </button></Link>  
+
+              
           </div>
         )}
       </div>

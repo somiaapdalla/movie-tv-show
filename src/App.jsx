@@ -5,7 +5,11 @@ import Header from "./component/header";
 import Movielist from "./pages/movielist";
 import ListFilms from "./pages/listfilms";
 import Watchlist from "./pages/watchlist";
-import { Contact } from "lucide-react";
+import Contact from "./pages/contact";
+import Watch from "./pages/watch";
+import Footer from "./component/footer";
+
+
 
 
 
@@ -21,8 +25,11 @@ function App() {
         <Route path="listfilm" element={<ListFilms />}/>
         <Route path="watchlist" element={<Watchlist />}/>
         <Route path="contact" element={<Contact />}/>
+        <Route path="/watch" element={<Watch />} />
+        
   
       </Routes>
+      <Footer />
 
 </div>
 }
