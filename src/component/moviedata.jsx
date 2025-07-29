@@ -1,4 +1,4 @@
-// src/data/movies.js
+
 const movies = [
   // --- TV SHOWS ---
   { id: 1, title: "Breaking Bad", type: "tv", poster: "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" },

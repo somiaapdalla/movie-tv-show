@@ -38,14 +38,13 @@ function Header() {
         <div className="relative z-10 px-6 py-5 flex justify-between items-center text-white">
           <h1 className="text-red-600 font-bold text-4xl md:text-5xl">NETFLIX</h1>
 
-          {/* زر القائمة في الجوال */}
+      
           <div className="md:hidden z-50">
             <button onClick={() => setMenuOpen(!menuOpen)}>
               <i className="fa-solid fa-bars text-2xl"></i>
             </button>
           </div>
 
-          {/* القائمة الرئيسية والبحث في الديسكتوب */}
           <div className="hidden md:flex items-center gap-6 md:fixed md:ml-[50%]">
             <ul className="flex gap-6 font-semibold text-lg">
               <NavLink to="/"><li>Home</li></NavLink>
@@ -73,7 +72,7 @@ function Header() {
           </div>
         </div>
 
-        {/* القائمة المنسدلة في الجوال */}
+       
         {menuOpen && (
           <ul className="absolute top-20 left-6 right-6 z-40 bg-black bg-opacity-80 text-white p-4 rounded-xl flex flex-col gap-4 md:hidden">
             <NavLink to="/" onClick={() => setMenuOpen(false)}><li>Home</li></NavLink>
@@ -83,7 +82,7 @@ function Header() {
           </ul>
         )}
 
-        {/* نتائج البحث أو المحتوى الأساسي */}
+       
         {filteredMovies.length > 0 ? (
           <div className="relative z-10 bg-black bg-opacity-70 py-10 px-6 min-h-screen">
             <h2 className="text-3xl font-bold mb-4 text-white">Search Results</h2>

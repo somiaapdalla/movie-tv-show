@@ -1,4 +1,4 @@
-// src/redux/watchSlice.js
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const watchSlice = createSlice({

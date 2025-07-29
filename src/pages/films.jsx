@@ -32,7 +32,7 @@ function MovieCard({ movie }) {
             ⭐⭐⭐ {movie.rating}
           </span>
 
-          {/* زر الإضافة للمفضلة */}
+      
           <button
             onClick={handleAdd}
             className="px-3 py-1 text-sm bg-yellow-600 text-white rounded-xl hover:bg-yellow-500"
@@ -40,7 +40,7 @@ function MovieCard({ movie }) {
              Watchlist
           </button>
 
-          {/* زر المشاهدة */}
+         
           <Link to="/watch" state={{movie}}>
             <button className="px-3 py-1 text-sm bg-yellow-600 text-white rounded-xl hover:bg-yellow-500">
               Watch
